@@ -6,3 +6,7 @@ Source: https://github.com/dah4k/dotfiles/
 Files: config/git-default-template/HEAD
 Copyright: 2024 dah4k
 License: CC0-1.0
+
+Files: config/alacritty/dracula.toml
+Copyright: 2018 Dracula Theme
+License: MIT
