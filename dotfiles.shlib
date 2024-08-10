@@ -13,6 +13,7 @@ declare -a dotfiles=(
     vim
     Xmodmap
     Xresources
+    xmonad
 
     config/alacritty
     config/git-default-template
