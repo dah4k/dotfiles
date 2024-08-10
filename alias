@@ -1,0 +1,43 @@
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+unalias -a
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias +="pushd ."
+alias -- -="popd"
+
+alias date="LC_TIME=en_GB.UTF-8 date"
+alias dust="dust --reverse"
+alias ip="ip --color=auto"
+alias la="ls -Altr"
+alias ls="ls -F --color=auto"
+
+alias mkae="make"
+alias maek="make"
+alias amke="make"
+
+# Search ignored, hidden, and binary files too (like `grep -r`)
+alias rg="rg --sort path --smart-case --no-ignore --hidden --binary"
+
+alias bit='git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
+
+alias drun="docker run --interactive --tty --rm "
+alias dsh="docker run --interactive --tty --rm --entrypoint=/bin/sh"
+alias dbash="docker run --interactive --tty --rm --entrypoint=/bin/bash"
+alias dexec="docker exec --interactive --tty /bin/bash"
+alias dls="docker images"
+alias drmall="docker ps --quiet --all | xargs docker rm"
+
+alias c='cargo'
+alias j="python3 -m json.tool < "
+alias v='vim -R'
+
+alias fsi='dotnet fsi'
+
+alias gcd='git checkout'
+alias gci='git commit'
+alias gdf='git diff'
+alias gls='git branch --list --all'
+alias gst='git status'

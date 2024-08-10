@@ -1,0 +1,21 @@
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+[user]
+	name = dah4k
+	email = 84741290+dah4k@users.noreply.github.com
+[credential]
+	helper = cache --timeout=600
+[core]
+	autocrlf = false
+	filemode = false
+[log]
+	date = iso
+[init]
+	templateDir = ~/.config/git-default-template
+	defaultBranch = main
+[alias]
+	ci = commit
+	lslog = log --all --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lstag = log --tags --simplify-by-decoration --pretty='format:%ci %d'
+	rclone = clone --recurse-submodules

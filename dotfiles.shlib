@@ -1,0 +1,20 @@
+#!/bin/sh
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+declare -a dotfiles=(
+    alias
+    bashrc
+    profile
+    gitconfig
+    inputrc
+    nanorc
+    tmux.conf
+    vim
+    Xmodmap
+    Xresources
+
+    config/alacritty
+    config/git-default-template
+    config/xkb
+)
