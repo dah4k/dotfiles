@@ -31,7 +31,6 @@ alias dls="docker images"
 alias drmall="docker ps --quiet --all | xargs docker rm"
 
 alias c='cargo'
-alias j="python3 -m json.tool < "
 alias v='vim -R'
 
 alias fsi='dotnet fsi'
