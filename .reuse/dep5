@@ -11,6 +11,10 @@ Files: config/alacritty/dracula.toml
 Copyright: 2018 Dracula Theme
 License: MIT
 
+Files: testdata/dracula-screenshot.cpp
+Copyright: 2024 dah4k
+License: MIT
+
 Files: testdata/dracula-screenshot.js
 Copyright: 2016 Dracula Theme
 License: MIT
