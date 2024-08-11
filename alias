@@ -39,5 +39,38 @@ alias fsi='dotnet fsi'
 alias gcd='git checkout'
 alias gci='git commit'
 alias gdf='git diff'
-alias gls='git branch --list --all'
 alias gst='git status'
+
+# Like `git branch --list --all` but with delta from Main branch
+gls()
+{
+    MAIN_BRANCHES="
+        origin/main
+        origin/master
+        origin/develop
+        origin/dev
+    "
+    for x in $MAIN_BRANCHES; do
+        if [[ -n $(git rev-parse --verify --quiet $x) ]]; then
+            main_branch="$x"
+            break
+        fi
+    done
+    CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+    RED="\033[0;31m"
+    GREEN="\033[0;32m"
+    NORM="\033[0m"
+    git for-each-ref --format='%(refname:short) %(committerdate:relative)' refs/heads refs/remotes |
+        while read local_branch modified; do
+            behind_ahead=`git rev-list --count --left-right $main_branch...$local_branch`
+            fmt="%-50s -%-5d +%-5d (%s)"
+            if [[ $local_branch == $CURRENT_BRANCH ]]; then
+                printf "* ${GREEN}${fmt}${NORM}\n" $local_branch $behind_ahead "$modified"
+            elif [[ $local_branch == origin/* ]]; then
+                printf "  ${RED}${fmt}${NORM}\n" remotes/$local_branch $behind_ahead "$modified"
+            else
+                printf "  ${fmt}\n" $local_branch $behind_ahead "$modified"
+            fi
+        done
+}
