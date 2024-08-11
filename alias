@@ -18,8 +18,8 @@ alias mkae="make"
 alias maek="make"
 alias amke="make"
 
-# Search ignored, hidden, and binary files too (like `grep -r`)
-alias rg="rg --sort path --smart-case --no-ignore --hidden --binary"
+# Search binary but skip VCS ignore and hidden files
+alias rg="rg --sort path --smart-case --binary"
 
 alias bit='git --git-dir=$HOME/.dotfiles-bare --work-tree=$HOME'
 
