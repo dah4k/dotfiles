@@ -11,6 +11,10 @@ Files: config/alacritty/dracula.toml
 Copyright: 2018 Dracula Theme
 License: MIT
 
+Files: testdata/dracula-screenshot.js
+Copyright: 2016 Dracula Theme
+License: MIT
+
 Files: vim/plugged/vim-dracula/*
 Copyright: 2016 Dracula Theme
 License: MIT
