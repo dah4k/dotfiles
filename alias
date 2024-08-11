@@ -1,5 +1,5 @@
 # Copyright 2024 dah4k
-# SPDX-License-Identifier: MIT-0
+# SPDX-License-Identifier: EPL-2.0
 
 unalias -a
 
@@ -31,6 +31,7 @@ alias dls="docker images"
 alias drmall="docker ps --quiet --all | xargs docker rm"
 
 alias c='cargo'
+alias d='dotnet'
 alias v='vim -R'
 
 alias fsi='dotnet fsi'
