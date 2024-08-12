@@ -89,6 +89,17 @@ noremap k gk
 noremap H g0
 noremap L g$
 
+" Reference: https://vim.fandom.com/wiki/Fix_syntax_highlighting
+if b:ergonomic_keyboard
+    noremap  <F4> <Esc>:syntax clear <Bar> syntax on<CR>
+    noremap  <F5> <Esc>:syntax sync fromstart<CR>
+    inoremap <F5> <C-o>:syntax sync fromstart<CR>
+else
+    noremap  <F3> <Esc>:syntax clear <Bar> syntax on<CR>
+    noremap  <F4> <Esc>:syntax sync fromstart<CR>
+    inoremap <F4> <C-o>:syntax sync fromstart<CR>
+endif
+
 if &diff
     set diffopt+=filler
     set diffopt+=iwhite
