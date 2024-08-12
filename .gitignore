@@ -4,5 +4,6 @@
 *.errors
 *.hi
 *.o
+*.html
 vim/plugged/
 xmonad/xmonad-x86_64-linux
