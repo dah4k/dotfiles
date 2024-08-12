@@ -1,0 +1,153 @@
+// Copyright 2024 dah4k
+// SPDX-License-Identifier: MIT-0
+
+= Document Title : Subtitle
+:author: Author Name
+:url-repo: URL Repo
+:!webfonts:
+:toc:
+
+== Chapter 1 Title
+
+=== Section 1.1 Title
+
+See https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/
+
+'''''
+
+== Emphasis
+
+_italic_ or __italic__
+
+*bold* or **bold**
+
+'''''
+
+== List
+
+* Item 1
+* Item 2 containing nested sub-list
+** Sub-Item A
+** Sub-Item B
+* Item 3 contining multiple paragraphs
++
+Second paragraph of item 3
+* Item 4
+
+'''''
+
+== Enumeration
+
+[arabic]
+. Item 1 initial text.
+[loweralpha]
+.. Item 1a.
+.. Item 1b.
+. {blank}
+[upperroman]
+.. Item 4I.
+.. Item 4II.
+
+'''''
+
+== Definition List (aka Description List)
+
+term 1::
+  Definition 1.
+
+term 2::
+  Definition 2, paragraph 1.
++
+Definition 2, paragraph 2.
+Notice the paragraph 2 must exactly follow the `+` continuation and not be indented.
+
+term 3 : classifier::
+  Definition 3.
+
+term 4 : classifier one : classifier two::
+  Definition 4.
+
+'''''
+
+== Block
+
+String `+literal+`
+
+[source, ruby]
+----
+3.times. do
+  print 'Welcome '
+end
+----
+
+Alternative:
+
+    Indented Text block following blank line
+
+CAUTION: Vim-AsciiDoc syntax is easy confused with indents and blocks
+
+'''''
+
+== Quote
+
+.Quoted Block with Attribution
+[quote, Someone]
+____
+Block Quote
+____
+
+.Quoted Paragraph with Attribution
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+-- Cicero, _De finibus bonorum et malorum_
+
+.Markdown-like Nested Quotes
+> Quoted text
+>
+> > Nested quoted text
+>
+> Back to initial quoted text
+
+NOTE: The Markdown-style blockquote should only be used in simple cases
+and when migrating from Markdown.
+The AsciiDoc syntax should always be preferred, if possible.
+
+'''''
+
+== Link and Reference
+
+Standalone Link https://example.com
+
+https://example.com[Link Label]
+
+link:document.html#chapter-1-title[Chapter 1 Title] link to HTML document heading.
+
+xref:document.adoc#chapter-1-title[Chapter 1 Title] Cross-Reference to anchor.
+Another <<chapter-1-title>> cross-reference to anchor.
+
+{ref}[Reference Label]
+
+:ref: https://example.com
+
+Footnote references, like{empty}footnote:[A footnote. An `+{empty}+` may be inserted to avoid adjacent `likefootnote` more difficult to read.].
+Note that footnotes may get rearranged, e.g., to the bottom of the "page".
+
+URL and Email autolinks
+
+* http://example.com
+* https://example.com
+* ftp://example.com
+* user@example.com
+* mailto:user@example.com
+
+'''''
+
+== Table
+
+|===
+|Command |Description
+
+|`cd`   |Change working directory
+|`ls`   |List directory contents
+|`pwd`  |Print working directory
+|===
