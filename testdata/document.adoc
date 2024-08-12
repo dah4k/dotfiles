@@ -6,10 +6,33 @@
 :url-repo: URL Repo
 :!webfonts:
 :toc:
+:toclevels: 5
+
+// ATX-style headers match by asciidocOneLineTitle
 
 == Chapter 1 Title
 
 === Section 1.1 Title
+
+==== Sub-Section 1.1.1 Title
+
+===== Sub-Sub-Section 1.1.1.1 Title
+
+// Setext-style headers match by asciidocTwoLineTitle
+
+Chapter 2 Two-Line Title
+------------------------
+
+Section 2.1 Two-Line Title
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sub-Section 2.1.1 Two-Line Title
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sub-Sub-Section 2.1.1.1 Two-Line Title
+++++++++++++++++++++++++++++++++++++++
+
+NOTE: Setext-style is NOT RECOMMENDED. The level ordering is not obvious!
 
 See https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/
 
