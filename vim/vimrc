@@ -4,7 +4,8 @@
 let b:ergonomic_keyboard=1
 
 call plug#begin(expand('~/.vim/plugged'))
-Plug 'dracula/vim', { 'as': 'vim-dracula' }
+"Plug 'dracula/vim', { 'as': 'vim-dracula' }
+Plug 'dah4k/vim-dracula', { 'branch': 'asciidoc' }
 Plug 'cespare/vim-toml'
 call plug#end()
 
