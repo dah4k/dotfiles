@@ -11,6 +11,7 @@ alias -- -="popd"
 alias date="LC_TIME=en_GB.UTF-8 date"
 alias dust="dust --reverse"
 alias ip="ip --color=auto"
+alias ispell="aspell -a"
 alias la="ls -Altr"
 alias ls="ls -F --color=auto"
 
