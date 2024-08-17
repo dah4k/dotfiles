@@ -47,7 +47,7 @@ background = "CellForeground"
 text = "CellBackground"
 
 [font]
-size = 20.0
+size = 22.0
 
 [font.bold]
 family = "Inconsolata"
