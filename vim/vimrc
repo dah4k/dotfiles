@@ -11,7 +11,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'ionide/Ionide-vim'
+Plug 'ionide/Ionide-vim', {
+    \ 'do': 'dotnet tool install --global fsautocomplete',
+    \ }
 call plug#end()
 
 filetype plugin indent on
