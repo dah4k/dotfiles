@@ -1,0 +1,14 @@
+#!/bin/sh
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+if [ $# != 1 ]; then
+    echo "Usage: $0 QUANTITY_IN_FLOZ"
+    exit 1
+fi
+
+# CAVEAT: GNU units conformability error...
+# Ounces (oz) is a unit of mass,
+# fluid ounces (floz or usfloz) is a unit of volume
+# which is tiny bigger than Imperial fluid ounces (brfloz).
+echo $(units --compact --one-line "$1 floz" ml) ml
