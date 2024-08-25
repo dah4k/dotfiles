@@ -1,0 +1,33 @@
+#!/bin/sh
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+JOURNAL_ROOT=$(readlink -f ${HOME}/journal)
+TODAY=$(date +"%F %A")
+TODAY_YEAR=$(date --date="${TODAY}" +"%Y")
+TODAY_MONTH=$(date --date="${TODAY}" +"%m")
+TODAY_FILENAME=$(date --date="${TODAY}" +"%d_%A.adoc")
+
+TODAY_DIRECTORY=${JOURNAL_ROOT}/${TODAY_YEAR}/${TODAY_MONTH}
+if [ ! -d ${TODAY_DIRECTORY} ]; then
+    mkdir -p ${TODAY_DIRECTORY}
+fi
+
+TODAY_ENTRY=${TODAY_DIRECTORY}/${TODAY_FILENAME}
+
+if [ ! -f ${TODAY_ENTRY} ]; then
+    last_entry=$(find ${JOURNAL_ROOT} -path "*/20??/??/??_*.adoc" | sort -r | head -1)
+
+    echo "= ${TODAY}"   >  ${TODAY_ENTRY}
+    echo ":!webfonts:"  >>  ${TODAY_ENTRY}
+    echo ":data-uri:"   >>  ${TODAY_ENTRY}
+    echo                >>  ${TODAY_ENTRY}
+    echo                >>  ${TODAY_ENTRY}
+
+    # Open current entry at line 4 and split window with last entry
+    # (in case of unfinished tasks)
+    vim +4 -o ${TODAY_ENTRY} ${last_entry}
+else
+    # Resume from last position by default
+    vim ${TODAY_ENTRY}
+fi
