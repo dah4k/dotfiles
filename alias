@@ -8,6 +8,7 @@ alias ...="cd ../.."
 alias +="pushd ."
 alias -- -="popd"
 
+alias bc="bc --mathlib"
 alias date="LC_TIME=en_GB.UTF-8 date"
 alias dust="dust --reverse"
 alias ip="ip --color=auto"
