@@ -4,6 +4,7 @@
 
 declare -a dotfiles=(
     alias
+    asoundrc
     bashrc
     profile
     gitconfig

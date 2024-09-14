@@ -1,0 +1,26 @@
+# Copyright 2024 dah4k
+# SPDX-License-Identifier: MIT-0
+
+# Reference: https://www.alsa-project.org/main/index.php/Asoundrc
+pcm.!default {
+    type plug
+    slave.pcm "dmixer"
+}
+
+pcm.dmixer  {
+    type dmix
+    ipc_key 1024
+    slave {
+        pcm "hw:0,3"    ## aplay --list-devices
+    }
+    # Swap LEFT-RIGHT speakers
+    bindings {
+        0 1
+        1 0
+    }
+}
+
+ctl.dmixer {
+    type hw
+    card 0
+}
