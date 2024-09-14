@@ -37,10 +37,10 @@ sudo zypper addlock dconf gvfs gvfs-backend-afc drkonqi5
 #sudo zypper addrepo --check --refresh --priority 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Multimedia/' packman-multimedia
 #sudo zypper addrepo --check --refresh --priority 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Extra/' packman-extra
 
-##  [ ] VLC repository (and vendor change)
+##  [x] VLC repository (and vendor change)
 ##      Key Fingerprint: BC8D780D E3308581 B2E07085 33DE8FB7 C8DA93D2
-#sudo zypper addrepo --refresh 'https://download.videolan.org/SuSE/Tumbleweed/' VLC
-#sudo zypper install --no-recommends vlc vlc-codecs libdvdcss2
+sudo zypper addrepo --refresh 'https://download.videolan.org/SuSE/Tumbleweed/' VLC
+sudo zypper install --no-recommends vlc vlc-codecs libdvdcss2
 
 ##  [x] Un-install LANG packages
 rpm -qa | grep -- "-lang" | xargs sudo rpm -e
