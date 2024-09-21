@@ -34,6 +34,9 @@ set noundofile viminfo=
 set noswapfile
 set nobackup
 
+" Search for tags in current and parent directories
+set tags=tags,../tags,../../tags,../../../tags
+
 set ruler
 set number
 set list listchars=tab:▹\ ,trail:▫
