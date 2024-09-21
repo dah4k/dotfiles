@@ -67,10 +67,15 @@ sudo zypper rm --clean-deps gdm
 ##  [x] Install Development Tools
 devtools="
     chromium
+    clang
+    ctags
     dmenu
+    dust
     evince
     evince-plugin-pdfdocument
     fd
+    gcc
+    gcc-c++
     ghc
     ghc-xmonad
     ghc-xmonad-contrib
@@ -79,13 +84,19 @@ devtools="
     git
     google-inconsolata-fonts
     htop
+    innoextract
     memtest86+
     patch
     qiv
     ripgrep
+    sqlite3
     tmux
+    tokei
     twm
+    valgrind
+    w3m
     xlsfonts
     xmonad
+    zip
 "
 sudo zypper install --no-recommends ${devtools}
