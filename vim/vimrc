@@ -14,6 +14,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'ionide/Ionide-vim', {
     \ 'do': 'dotnet tool install --global fsautocomplete',
     \ }
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 filetype plugin indent on
