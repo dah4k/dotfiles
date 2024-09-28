@@ -36,6 +36,8 @@ alias c='cargo'
 alias d='dotnet'
 alias v='vim -R'
 
+alias youtube720p='yt-dlp -f 140+136'
+
 alias fsi='dotnet fsi'
 
 alias gcd='git checkout'
