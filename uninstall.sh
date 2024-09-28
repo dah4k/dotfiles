@@ -2,11 +2,10 @@
 # Copyright 2024 dah4k
 # SPDX-License-Identifier: MIT-0
 
-function uninstall
-{
-    source ./dotfiles.shlib
+uninstall() {
+    . ./dotfiles.shlib
 
-    for x in "${dotfiles[@]}"; do
+    for x in $dotfiles; do
         rm $HOME/.$x
     done
 }
