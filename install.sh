@@ -2,11 +2,10 @@
 # Copyright 2024 dah4k
 # SPDX-License-Identifier: MIT-0
 
-function install
-{
-    source ./dotfiles.shlib
+install() {
+    . ./dotfiles.shlib
 
-    for x in "${dotfiles[@]}"; do
+    for x in $dotfiles; do
         ## Make sure parent directory exist
         parent=$HOME/.$(dirname $x)
         [ -d $parent ] || mkdir -p $parent
