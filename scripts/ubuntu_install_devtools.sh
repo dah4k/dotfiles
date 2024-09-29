@@ -4,6 +4,7 @@
 
 devtools="
     afl++
+    asciidoctor
     clang
     dmenu
     docker.io
@@ -21,6 +22,7 @@ devtools="
     memtest86++
     ncal
     ripgrep
+    ruby-asciidoctor-pdf
     socat
     tmux
     valgrind
