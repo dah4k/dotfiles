@@ -22,6 +22,7 @@ devtools="
     libxcb-ewmh-dev
     memtest86++
     ncal
+    plocate
     ripgrep
     ruby-asciidoctor-pdf
     socat
