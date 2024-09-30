@@ -10,6 +10,7 @@ devtools="
     docker.io
     exuberant-ctags
     fd-find
+    ffmpeg
     fonts-inconsolata
     g++
     gcc
