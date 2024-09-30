@@ -101,7 +101,7 @@ draculaAnsiBrightWhite  = "#FFFFFF"
 -- My Basic Stuff
 ------------------------------------------------------------------------
 
-myTerminal          = "~/bin/alacritty"
+myTerminal          = "alacritty"
 myBorderWidth       = 16
 myNormalBorderColor = draculaGray
 myFocusedBorderColor= draculaDarkPurple2
