@@ -28,6 +28,7 @@ devtools="
     socat
     tmux
     valgrind
+    vlc
     w3m
     xmonad
 "
