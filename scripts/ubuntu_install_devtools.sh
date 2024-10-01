@@ -6,6 +6,7 @@ devtools="
     afl++
     asciidoctor
     clang
+    cmake
     dmenu
     docker.io
     exuberant-ctags
@@ -20,8 +21,11 @@ devtools="
     libghc-xmonad-contrib-dev
     libghc-xmonad-dev
     libxcb-ewmh-dev
+    make
     memtest86++
     ncal
+    ninja-build
+    patch
     plocate
     ripgrep
     ruby-asciidoctor-pdf
