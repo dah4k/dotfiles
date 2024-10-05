@@ -138,7 +138,7 @@ myLayout = smartBorders tallMain
 -- * Set root window color
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "xrandr --output HDMI-A-0 --mode 2560x1440 --rate 144 &"
+    spawnOnce "xrandr --output DP-1 --mode 2560x1440 --rate 144 &"
     spawnOnce "xset -b -dpms s off m 5 0 &"
     spawnOnce $ "xsetroot -solid '" ++ draculaGray ++ "' &"
 
