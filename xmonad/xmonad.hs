@@ -19,7 +19,7 @@ import XMonad
 -- Fix fullscreen video games [^bigeekfan].
 -- [^bigeekfan]: https://www.bigeekfan.com/post/20181124_xmonad_config/
 -- https://hackage.haskell.org/package/xmonad-contrib-0.15/docs/XMonad-Hooks-EwmhDesktops.html
--- FIXME import XMonad.Hooks.EwmhDesktops(ewmhFullscreen,ewmh)
+import XMonad.Hooks.EwmhDesktops(ewmhFullscreen,ewmh)
 
 
 -- Save the pixels, remove unused borders
@@ -160,8 +160,7 @@ myManageHook = composeAll [
 
 main :: IO ()
 main = do
-    -- FIXME xmonad . ewmhFullscreen . ewmh $ def -- ewmh is used for fullscreen games
-    xmonad $ def
+    xmonad . ewmhFullscreen . ewmh $ def -- ewmh is used for fullscreen games
       {
         -- Basic stuff
         terminal            = myTerminal
