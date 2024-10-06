@@ -18,10 +18,13 @@
         # Name Server 2: 149.112.122.10     # private.canadianshield.cira.ca
 
 ##  [x] Audio
-##      [x] Disable pulseaudio
-##      [x] Install pipewire
-sudo zypper remove --clean-deps pulseaudio
-sudo zypper addlock pulseaudio pavucontrol
+##      [x] Uninstall and disable PulseAudio and Pipewire-Pulse
+##      [x] Install and enable ALSA
+##  Reference: https://en.opensuse.org/SDB:Audio_troubleshooting
+sudo zypper remove --clean-deps pulseaudio pipewire-pulse
+sudo zypper addlock pulseaudio pavucontrol pipewire-pulse
+sudo zypper install --no-recommends alsa alsa-utils alsa-firmware
+sudo systemctl restart alsasound
 
 ##  [x] GNOME
 ##      [x] dconf
