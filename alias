@@ -11,7 +11,6 @@ alias -- -="popd"
 alias bc="bc --mathlib"
 alias date="LC_TIME=en_GB.UTF-8 date"
 alias dust="dust --reverse"
-alias fd="fdfind"
 alias ip="ip --color=auto"
 alias ispell="aspell -a"
 alias la="ls -Altr"
@@ -20,6 +19,15 @@ alias ls="ls -F --color=auto"
 alias mkae="make"
 alias maek="make"
 alias amke="make"
+
+# Fix distros calling `fdfind`
+# Reference: https://github.com/sharkdp/fd/
+alias fd='_fd(){
+    if $(which fdfind 2>/dev/null); then
+        fdfind "$@";
+    else fd "$@";
+    fi;
+};_fd'
 
 # Fix ERROR: XMLRPC request failed [code: -32500]
 # Reference: https://github.com/victorgarric/pip_search/
