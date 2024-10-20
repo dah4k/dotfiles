@@ -53,6 +53,7 @@ unused_packages="
     PackageKit
     PackageKit-gstreamer-plugin
     gnome-online-accounts
+    openssh-askpass-gnome
     libgnomesu
     libroffice
     mutter
@@ -61,7 +62,7 @@ unused_packages="
     screen
 "
 sudo zypper rm --clean-deps ${unused_packages}
-sudo zypper addlock nano
+sudo zypper addlock nano openssh-askpass-gnome
 
 ##  [x] Install LightDM before removing GNOME Display Manager
 sudo zypper install --no-recommends lightdm
