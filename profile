@@ -30,3 +30,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 if [ -d "$HOME/.dotnet/tools" ]; then
     export PATH=$HOME/.dotnet/tools:$PATH
 fi
+
+## Disable .NET Interactive telemetry
+## https://github.com/dotnet/interactive#how-to-opt-out
+export DOTNET_INTERACTIVE_CLI_TELEMETRY_OPTOUT=1
