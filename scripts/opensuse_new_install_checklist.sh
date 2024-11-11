@@ -30,9 +30,10 @@ sudo systemctl restart alsasound
 ##      [x] dconf
 ##      [x] gvfs
 ##      [x] gvfs iPod/iPhone backend
-##      [x] drkonqi5
-sudo zypper remove --clean-deps dconf gvfs gvfs-backend-afc drkonqi5
-sudo zypper addlock dconf gvfs gvfs-backend-afc drkonqi5
+##  [x] KDE
+##      [x] drkonqi6
+sudo zypper remove --clean-deps dconf gvfs gvfs-backend-afc drkonqi6
+sudo zypper addlock dconf gvfs gvfs-backend-afc drkonqi6
 
 ##  [ ] Packman repositories
 ##      Key Fingerprint:  F8875B88 0D518B6B 8C530D13 45A1D067 1ABD1AFB
