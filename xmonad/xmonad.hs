@@ -42,6 +42,17 @@ import XMonad.Hooks.InsertPosition
 -- https://hackage.haskell.org/package/xmonad-contrib-0.16/docs/XMonad-Util-SpawnOnce.html
 import XMonad.Util.SpawnOnce
 
+-- TopicSpace (disabled)
+-- https://tony-zorman.com/posts/topic-space/2022-09-11-topic-spaces.html
+-- https://hackage.haskell.org/package/xmonad-contrib-0.18.1/docs/XMonad-Actions-TopicSpace.html
+-- import XMonad.Actions.TopicSpace
+-- topicItems :: [TopicItem]
+-- topicItems =
+--   [ noAction    "1:EDIT"    "."
+--   , noAction    "2:COMPILE" "."
+--   , noAction    "3:DOC"     "journal"
+--   , inHome      "4:WEB"                 (spawn "firefox")
+--   ]
 
 ------------------------------------------------------------------------
 -- Dracula Theme Colors
