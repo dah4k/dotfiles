@@ -93,6 +93,7 @@ devtools="
     memtest86+
     patch
     qiv
+    qt6ct
     ripgrep
     sqlite3
     tmux
