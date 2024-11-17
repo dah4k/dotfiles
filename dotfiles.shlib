@@ -18,5 +18,6 @@ dotfiles="
 
     config/alacritty
     config/git-default-template
+    config/qt6ct
     config/xkb
 "
