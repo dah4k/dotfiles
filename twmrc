@@ -84,6 +84,7 @@ menu "defops"
 "Xterm"         f.exec "exec xterm &"
 "Alacritty"     f.exec "exec alacritty &"
 "Firefox"       f.exec "exec firefox &"
+"Wizardry"      f.exec "exec wizardry &"
 ""      f.nop
 "Kill"          f.destroy
 "Delete"        f.delete

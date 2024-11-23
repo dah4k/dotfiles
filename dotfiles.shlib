@@ -11,6 +11,7 @@ dotfiles="
     inputrc
     nanorc
     tmux.conf
+    twmrc
     vim
     Xmodmap
     Xresources
