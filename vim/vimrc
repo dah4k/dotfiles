@@ -52,6 +52,11 @@ if ($COLORTERM == 'truecolor' || $COLORTERM == '24bit')
     " Enable 24-bit color
     " Reference: https://gist.github.com/XVilka/8346728
     set termguicolors
+elseif has('termguicolors')
+    " vim:help xterm-true-color
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
 else
     " Fallback to 256-color palette
     set t_Co=256
