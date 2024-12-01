@@ -1,7 +1,10 @@
 " Copyright 2024 dah4k
 " SPDX-License-Identifier: EPL-2.0
 
-let b:ergonomic_keyboard=1
+" 0: IBM Model M 101-key ANSI layout
+" 1: Microsoft Natural 4000
+" 2: Microsoft/Incase LXM-00001
+let b:ergonomic_keyboard=2
 
 call plug#begin(expand('~/.vim/plugged'))
 "Plug 'dracula/vim', { 'as': 'vim-dracula' }
@@ -107,7 +110,11 @@ noremap H g0
 noremap L g$
 
 " Reference: https://vim.fandom.com/wiki/Fix_syntax_highlighting
-if b:ergonomic_keyboard
+if (b:ergonomic_keyboard == 2)
+    noremap  <F5> <Esc>:syntax clear <Bar> syntax on<CR>
+    noremap  <F6> <Esc>:syntax sync fromstart<CR>
+    inoremap <F6> <C-o>:syntax sync fromstart<CR>
+elseif (b:ergonomic_keyboard == 1)
     noremap  <F4> <Esc>:syntax clear <Bar> syntax on<CR>
     noremap  <F5> <Esc>:syntax sync fromstart<CR>
     inoremap <F5> <C-o>:syntax sync fromstart<CR>
@@ -121,7 +128,12 @@ if &diff
     set diffopt+=filler
     set diffopt+=iwhite
     set diffopt+=horizontal
-    if b:ergonomic_keyboard
+    if (b:ergonomic_keyboard == 2)
+        map <F7> [czz
+        map <F8> ]czz
+        map <F9> dp
+        map <F10> do
+    elseif (b:ergonomic_keyboard == 1)
         map <F6> [czz
         map <F7> ]czz
         map <F8> dp
@@ -133,7 +145,12 @@ if &diff
         map <F8> do
     endif
 else
-    if b:ergonomic_keyboard
+    if (b:ergonomic_keyboard == 2)
+        map <F7> :bprevious <CR>
+        map <F8> :bnext <CR>
+        map <F9> :cprevious <CR>
+        map <F10> :cnext <CR>
+    elseif (b:ergonomic_keyboard == 1)
         map <F6> :bprevious <CR>
         map <F7> :bnext <CR>
         map <F8> :cprevious <CR>
