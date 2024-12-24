@@ -36,6 +36,9 @@ else
     export PS1="$BLUE\A $BRIGHT_MAGENTA\w$BRIGHT_GREEN git:($BRIGHT_YELLOW\$(git symbolic-ref --short HEAD 2>/dev/null)$BRIGHT_GREEN)$NORM\n% "
 fi
 
+## Disable accidental C-s (XOFF) and C-q (XON) flow controls
+stty -ixoff -ixon
+
 [ -r $HOME/.alias ] && source $HOME/.alias
 
 ################################################################################

@@ -37,6 +37,3 @@ export DOTNET_INTERACTIVE_CLI_TELEMETRY_OPTOUT=1
 
 ## Enable Qt6 Configuration Tool settings
 export QT_QPA_PLATFORMTHEME=qt6ct
-
-## Disable accidental C-s (XOFF) and C-q (XON) flow controls
-stty -ixoff -ixon
