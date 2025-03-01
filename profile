@@ -26,6 +26,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export JH_PREF_PATH=$HOME/.config/jupiterhell/
 
 ## Disable .NET telemetry
+## https://learn.microsoft.com/en-us/dotnet/core/tools/telemetry#how-to-opt-out
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 if [ -d "$HOME/.dotnet/tools" ]; then
     export PATH=$HOME/.dotnet/tools:$PATH
