@@ -7,7 +7,7 @@
 #   0,0     1080,0                      3680,0                      6200,0
 #   +-----------+---------------------------+---------------------------+
 #   |           |                           |                           |
-#   |  DP-1-3   |       DP-1-2 (DP)         |       eDP-1 (Laptop)      |
+#   |  DP-1-1   |       DP-1-3 (DP)         |       eDP-1 (Laptop)      |
 #   |  (HDMI)   |       --primary           |                           |
 #   |           |                           |                           |
 #   | --rotate  |                           |                           |
@@ -20,6 +20,6 @@
 #   0,1920  1080,1921
 
 xrandr \
-    --output DP-1-3 --rotate left --pos 0x0 --mode 1920x1080 --rate 60 \
-    --output DP-1-2 --primary --pos 1080x0 --mode 2560x1440 --rate 75 \
+    --output DP-1-1 --rotate left --pos 0x0 --mode 1920x1080 --rate 60 \
+    --output DP-1-3 --primary --pos 1080x0 --mode 2560x1440 --rate 75 \
     --output eDP-1 --pos 3680x0 --mode 2560x1600 --rate 120
